@@ -1,0 +1,573 @@
+
+ :: Dubbo Spring Boot (v3.0.10) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v3.0.10) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.0)
+
+2022-08-02 16:17:51.229  INFO 12271 --- [           main] c.e.EbdmnTestDubboProviderApplication    : Starting EbdmnTestDubboProviderApplication using Java 1.8.0_251 on MacBook-Pro with PID 12271 (/Users/liushaohui/Code/ebdmn-test-dubbo/ebdmn-test-dubbo-provider/target/classes started by liushaohui in /Users/liushaohui/Code/ebdmn-test-dubbo)
+2022-08-02 16:17:51.229  INFO 12271 --- [           main] c.e.EbdmnTestDubboProviderApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-08-02 16:17:51.589  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Reset global default framework from null to Dubbo Framework[1], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.589  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Dubbo Framework[1] is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.626  INFO 12271 --- [           main] o.a.dubbo.rpc.model.ApplicationModel     :  [DUBBO] Dubbo Application[1.0](unknown) is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.627  INFO 12271 --- [           main] org.apache.dubbo.rpc.model.ScopeModel    :  [DUBBO] Dubbo Module[1.0.0] is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.651  INFO 12271 --- [           main] o.a.d.c.context.AbstractConfigManager    :  [DUBBO] Config settings: {dubbo.config.mode=STRICT, dubbo.config.ignore-duplicated-interface=false}, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.652  INFO 12271 --- [           main] o.a.d.c.context.AbstractConfigManager    :  [DUBBO] Config settings: {dubbo.config.mode=STRICT, dubbo.config.ignore-duplicated-interface=false}, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.692  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Reset global default application from null to Dubbo Application[1.1](unknown), dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.693  INFO 12271 --- [           main] o.a.dubbo.rpc.model.ApplicationModel     :  [DUBBO] Dubbo Application[1.1](unknown) is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.693  INFO 12271 --- [           main] org.apache.dubbo.rpc.model.ScopeModel    :  [DUBBO] Dubbo Module[1.1.0] is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.697  INFO 12271 --- [           main] o.a.d.c.context.AbstractConfigManager    :  [DUBBO] Config settings: {dubbo.config.mode=STRICT, dubbo.config.ignore-duplicated-interface=false}, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.697  INFO 12271 --- [           main] o.a.d.c.context.AbstractConfigManager    :  [DUBBO] Config settings: {dubbo.config.mode=STRICT, dubbo.config.ignore-duplicated-interface=false}, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.706  INFO 12271 --- [           main] o.a.d.c.s.c.DubboSpringInitializer       :  [DUBBO] Use default application: Dubbo Application[1.1](unknown), dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.706  INFO 12271 --- [           main] org.apache.dubbo.rpc.model.ScopeModel    :  [DUBBO] Dubbo Module[1.1.1] is created, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.708  INFO 12271 --- [           main] o.a.d.c.context.AbstractConfigManager    :  [DUBBO] Config settings: {dubbo.config.mode=STRICT, dubbo.config.ignore-duplicated-interface=false}, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.710  INFO 12271 --- [           main] o.a.d.c.s.c.DubboSpringInitializer       :  [DUBBO] Use default module model of target application: Dubbo Module[1.1.1], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.711  INFO 12271 --- [           main] o.a.d.c.s.c.DubboSpringInitializer       :  [DUBBO] Bind Dubbo Module[1.1.1] to spring container: org.springframework.beans.factory.support.DefaultListableBeanFactory@3a1d593e, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.861  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.861  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.863  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] Found 1 classes annotated by Dubbo @Service under package [com.ebdmn.manager]: [com.ebdmn.manager.DubboTestManager], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.876  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] Register ServiceBean[ServiceBean:com.ebdmn.manager.api.service.IDubboTestManager:1.0.0]: Root bean: class [org.apache.dubbo.config.spring.ServiceBean]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.876  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.877  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.877  INFO 12271 --- [           main] c.s.b.f.a.ServiceAnnotationPostProcessor :  [DUBBO] Ignore package who has already bean scanned: com.ebdmn.manager, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:51.877  INFO 12271 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-08-02 16:17:51.877  INFO 12271 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-08-02 16:17:52.122  INFO 12271 --- [           main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2022-08-02 16:17:52.368  INFO 12271 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7001 (http)
+2022-08-02 16:17:52.375  INFO 12271 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 16:17:52.375  INFO 12271 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-08-02 16:17:52.489  INFO 12271 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-02 16:17:52.489  INFO 12271 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1217 ms
+2022-08-02 16:17:52.602  INFO 12271 --- [           main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2022-08-02 16:17:52.604  INFO 12271 --- [           main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2022-08-02 16:17:52.646  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] No value is configured in the registry, the DynamicConfigurationFactory extension[name : nacos] supports as the config center, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:52.647  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] The registry[<dubbo:registry group="EBDMN_GROUP" address="nacos://192.168.8.193:8848?namespace=ebdmn-dev" protocol="nacos" port="8848" registerMode="interface" />] will be used as the config center, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:52.651  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] use registry as config-center: <dubbo:config-center namespace="EBDMN_GROUP" group="EBDMN_GROUP" highestPriority="false" id="config-center-nacos-192.168.8.193-8848" address="nacos://192.168.8.193:8848?namespace=ebdmn-dev" protocol="nacos" port="8848" />, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:52.744  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2022-08-02 16:17:52.744  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2022-08-02 16:17:53.551  WARN 12271 --- [           main] o.a.d.common.config.ConfigurationUtils   :  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.551  WARN 12271 --- [           main] o.a.d.common.config.ConfigurationUtils   :  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.593  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.0] has been initialized!, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.596  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.1] has been initialized!, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.600  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] No value is configured in the registry, the MetadataReportFactory extension[name : nacos] supports as the metadata center, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.600  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] The registry[<dubbo:registry group="EBDMN_GROUP" address="nacos://192.168.8.193:8848?namespace=ebdmn-dev" protocol="nacos" port="8848" registerMode="interface" />] will be used as the metadata center, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.602  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] use registry as metadata-center: <dubbo:metadata-report group="EBDMN_GROUP" address="nacos://192.168.8.193:8848?namespace=ebdmn-dev" protocol="nacos" port="8848" />, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:53.677  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2022-08-02 16:17:53.677  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2022-08-02 16:17:53.678  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) has been initialized!, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.146  INFO 12271 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7001 (http) with context path ''
+2022-08-02 16:17:54.155  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.1] is starting., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.155  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) is starting., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.271  INFO 12271 --- [           main] o.a.d.qos.protocol.QosProtocolWrapper    :  [DUBBO] qos won't be started because it is disabled. Please check dubbo.application.qos.enable is configured either in system property, dubbo.properties or XML/spring-boot configuration., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.273  INFO 12271 --- [           main] org.apache.dubbo.config.ServiceConfig    :  [DUBBO] Export dubbo service com.ebdmn.manager.api.service.IDubboTestManager to local registry url : injvm://127.0.0.1/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&qos.enable=false&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.273  INFO 12271 --- [           main] org.apache.dubbo.config.ServiceConfig    :  [DUBBO] Register dubbo service com.ebdmn.manager.api.service.IDubboTestManager url dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&qos.enable=false&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.275  INFO 12271 --- [           main] o.a.d.qos.protocol.QosProtocolWrapper    :  [DUBBO] qos won't be started because it is disabled. Please check dubbo.application.qos.enable is configured either in system property, dubbo.properties or XML/spring-boot configuration., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.295  INFO 12271 --- [           main] o.a.d.qos.protocol.QosProtocolWrapper    :  [DUBBO] qos won't be started because it is disabled. Please check dubbo.application.qos.enable is configured either in system property, dubbo.properties or XML/spring-boot configuration., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.441  INFO 12271 --- [           main] o.a.d.remoting.transport.AbstractServer  :  [DUBBO] Start NettyServer bind /192.168.8.193:20800, export /192.168.8.193:20800, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.519  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2022-08-02 16:17:54.519  INFO 12271 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2022-08-02 16:17:54.644  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Register: dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.976 ERROR 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.1] start failed: java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: , dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:217) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.register(ListenerRegistryWrapper.java:59) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.register(RegistryProtocol.java:211) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:248) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:337) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:309) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:186) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:204) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 35 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:128) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:94) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:145) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.registerInstance(NacosNamingServiceWrapper.java:59) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:180) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 36 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 42 common frames omitted
+
+2022-08-02 16:17:54.979  INFO 12271 --- [           main] .c.m.ConfigurableMetadataServiceExporter :  [DUBBO] Metadata Service Port hasn't been set will use default protocol defined in protocols., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.979  INFO 12271 --- [           main] .c.m.ConfigurableMetadataServiceExporter :  [DUBBO] Using dubbo protocol to export metadata service on port 20800, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.979  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.0] is starting., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.980 ERROR 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) found failed module: Dubbo Module[1.1.1], dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:217) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.register(ListenerRegistryWrapper.java:59) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.register(RegistryProtocol.java:211) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:248) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:337) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:309) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:186) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:204) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 35 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:128) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:94) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:145) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.registerInstance(NacosNamingServiceWrapper.java:59) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:180) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 36 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 42 common frames omitted
+
+2022-08-02 16:17:54.981  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.0] has started., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:54.981 ERROR 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) found failed module: Dubbo Module[1.1.1], dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:217) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.register(ListenerRegistryWrapper.java:59) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.register(RegistryProtocol.java:211) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:248) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:337) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:309) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:186) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:204) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 35 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:128) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:94) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:145) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.registerInstance(NacosNamingServiceWrapper.java:59) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:180) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 36 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 42 common frames omitted
+
+2022-08-02 16:17:55.014  INFO 12271 --- [           main] org.apache.dubbo.config.ServiceConfig    :  [DUBBO] Export dubbo service org.apache.dubbo.metadata.MetadataService to local registry url : injvm://127.0.0.1/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.015  INFO 12271 --- [           main] org.apache.dubbo.config.ServiceConfig    :  [DUBBO] Export dubbo service org.apache.dubbo.metadata.MetadataService to url dubbo://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.024  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Subscribe: provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.342 ERROR 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Failed to subscribe provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, waiting for retry, cause: Failed to subscribe provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: , dubbo version: 3.0.10, current host: 192.168.8.193
+
+org.apache.dubbo.rpc.RpcException: Failed to subscribe provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doSubscribe(NacosRegistry.java:259) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doSubscribe(NacosRegistry.java:215) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.subscribe(FailbackRegistry.java:297) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.subscribe(ListenerRegistryWrapper.java:111) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:260) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) [dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) [dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) [dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.metadata.ConfigurableMetadataServiceExporter.export(ConfigurableMetadataServiceExporter.java:70) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.metadata.ExporterDeployListener.onModuleStarted(ExporterDeployListener.java:70) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.exportMetadataService(DefaultApplicationDeployer.java:923) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.prepareApplicationInstance(DefaultApplicationDeployer.java:613) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.checkState(DefaultApplicationDeployer.java:824) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.notifyModuleChanged(DefaultApplicationDeployer.java:812) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.onModuleFailed(DefaultModuleDeployer.java:263) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:174) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doSubscribe(NamingGrpcClientProxy.java:229) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.subscribe(NamingGrpcClientProxy.java:214) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.subscribe(NamingClientProxyDelegate.java:147) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getAllInstances(NacosNamingService.java:229) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getAllInstances(NacosNamingService.java:212) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getAllInstances(NacosNamingService.java:190) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getAllInstances(NacosNamingServiceWrapper.java:55) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doSubscribe(NacosRegistry.java:233) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 41 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 49 common frames omitted
+
+2022-08-02 16:17:55.351  INFO 12271 --- [           main] o.a.d.r.c.m.MigrationRuleListener        :  [DUBBO] Listening for migration rules on dataId dubbo-demo-provider.migration, group DUBBO_SERVICEDISCOVERY_MIGRATION, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.357  INFO 12271 --- [           main] .c.m.ConfigurableMetadataServiceExporter :  [DUBBO] The MetadataService exports urls : [dubbo://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.358  INFO 12271 --- [           main] o.a.d.r.c.m.ServiceInstanceMetadataUtils :  [DUBBO] Start registering instance address to registry., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.361 ERROR 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) found failed module: Dubbo Module[1.1.1], dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:217) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.register(ListenerRegistryWrapper.java:59) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.register(RegistryProtocol.java:211) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:248) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:337) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:309) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:186) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:204) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 35 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:128) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:94) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:145) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.registerInstance(NacosNamingServiceWrapper.java:59) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:180) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 36 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 42 common frames omitted
+
+2022-08-02 16:17:55.366  INFO 12271 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-02 16:17:55.373  INFO 12271 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-02 16:17:55.396 ERROR 12271 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:217) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.register(ListenerRegistryWrapper.java:59) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.register(RegistryProtocol.java:211) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:248) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:72) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:647) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:625) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:584) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:416) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:400) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:362) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:234) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:337) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:309) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to register dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:186) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:204) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 35 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:128) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:94) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:145) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.registerInstance(NacosNamingServiceWrapper.java:59) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doRegister(NacosRegistry.java:180) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 36 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 42 common frames omitted
+
+2022-08-02 16:17:55.399  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.1] is stopping., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.400  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.1] has stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.400  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Reset global default application from Dubbo Application[1.1](dubbo-demo-provider) to null, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.400  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) is stopping., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.400  INFO 12271 --- [           main] o.a.d.registry.support.RegistryManager   :  [DUBBO] Close all registries [nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.400  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Destroy registry:nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.401  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Unregister: dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.721  WARN 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Failed to unregister url dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10 on destroy, cause: Failed to unregister dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to unregister dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: , dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.IllegalStateException: Failed to unregister dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to registry 192.168.8.193:8848, cause: Failed to unregister dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.support.FailbackRegistry.unregister(FailbackRegistry.java:266) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:515) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.destroy(FailbackRegistry.java:407) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.RegistryManager.destroyAll(RegistryManager.java:105) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.destroyRegistries(DefaultApplicationDeployer.java:1019) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.preDestroy(DefaultApplicationDeployer.java:767) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ApplicationModel.onDestroy(ApplicationModel.java:244) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ApplicationModel.tryDestroy(ApplicationModel.java:355) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:132) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1058) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:790) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+Caused by: org.apache.dubbo.rpc.RpcException: Failed to unregister dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0 to nacos nacos://192.168.8.193:8848/org.apache.dubbo.registry.RegistryService?application=dubbo-demo-provider&dubbo=2.0.2&group=EBDMN_GROUP&interface=org.apache.dubbo.registry.RegistryService&namespace=ebdmn-dev&pid=12271&qos.enable=false&register-mode=interface&release=3.0.10, cause: Request nacos server failed: 
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doUnregister(NacosRegistry.java:200) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.support.FailbackRegistry.unregister(FailbackRegistry.java:253) [dubbo-registry-api-3.0.10.jar:3.0.10]
+	... 26 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doDeregisterService(NamingGrpcClientProxy.java:152) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.deregisterService(NamingGrpcClientProxy.java:138) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.deregisterService(NamingClientProxyDelegate.java:99) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:180) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:170) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:155) ~[nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.deregisterInstance(NacosNamingServiceWrapper.java:63) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.doUnregister(NacosRegistry.java:195) ~[dubbo-registry-nacos-3.0.10.jar:3.0.10]
+	... 27 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Connection is unregistered.
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:670) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 35 common frames omitted
+
+2022-08-02 16:17:55.722  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Unsubscribe: provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.722  INFO 12271 --- [           main] o.a.dubbo.registry.nacos.NacosRegistry   :  [DUBBO] Destroy unsubscribe url provider://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.724  INFO 12271 --- [           main] o.a.d.rpc.protocol.dubbo.DubboProtocol   :  [DUBBO] Destroying protocol [DubboProtocol] ..., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.724  INFO 12271 --- [           main] o.a.d.rpc.protocol.dubbo.DubboProtocol   :  [DUBBO] Closing dubbo server: /192.168.8.193:20800, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:55.725  INFO 12271 --- [           main] o.a.d.remoting.transport.AbstractServer  :  [DUBBO] Close NettyServer bind /192.168.8.193:20800, export /192.168.8.193:20800, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.800  INFO 12271 --- [           main] o.a.d.rpc.protocol.dubbo.DubboProtocol   :  [DUBBO] Unexport service: dubbo://192.168.8.193:20800/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.800  INFO 12271 --- [           main] o.a.d.rpc.protocol.dubbo.DubboProtocol   :  [DUBBO] Unexport service: dubbo://192.168.8.193:20800/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&qos.enable=false&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.800  INFO 12271 --- [           main] org.apache.dubbo.qos.server.Server       :  [DUBBO] qos-server stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  INFO 12271 --- [           main] o.a.d.rpc.protocol.injvm.InjvmProtocol   :  [DUBBO] Unexport service: injvm://127.0.0.1/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=dubbo-demo-provider&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,getSubscribedURLs,version,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=12271&qos.enable=false&register=false&release=3.0.10&revision=3.0.10&side=provider&threadpool=cached&threads=100&timeout=600000&timestamp=1659428274995&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  INFO 12271 --- [           main] o.a.d.rpc.protocol.injvm.InjvmProtocol   :  [DUBBO] Unexport service: injvm://127.0.0.1/com.ebdmn.manager.api.service.IDubboTestManager?anyhost=false&application=dubbo-demo-provider&background=false&bind.ip=192.168.8.193&bind.port=20800&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&group=DEV&interface=com.ebdmn.manager.api.service.IDubboTestManager&methods=hello&pid=12271&qos.enable=false&release=3.0.10&revision=1.0.0&side=provider&timeout=600000&timestamp=1659428274211&version=1.0.0, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  INFO 12271 --- [           main] org.apache.dubbo.qos.server.Server       :  [DUBBO] qos-server stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  WARN 12271 --- [           main] o.a.d.registry.support.RegistryManager   :  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  WARN 12271 --- [           main] o.a.d.c.deploy.FrameworkModelCleaner     :  [DUBBO] null, dubbo version: 3.0.10, current host: 192.168.8.193
+
+java.lang.NullPointerException: null
+	at org.apache.dubbo.registry.integration.RegistryProtocol$ExporterChangeableWrapper.unexport(RegistryProtocol.java:924) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.registry.integration.RegistryProtocol.destroy(RegistryProtocol.java:637) ~[dubbo-registry-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.destroy(QosProtocolWrapper.java:83) ~[dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.destroy(ProtocolListenerWrapper.java:89) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.destroy(ProtocolFilterWrapper.java:79) ~[dubbo-cluster-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.destroy(ProtocolSerializationWrapper.java:57) ~[dubbo-rpc-api-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.FrameworkModelCleaner.destroyProtocols(FrameworkModelCleaner.java:65) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.FrameworkModelCleaner.destroyFrameworkResources(FrameworkModelCleaner.java:52) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.FrameworkModelCleaner.onDestroy(FrameworkModelCleaner.java:44) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.deploy.FrameworkModelCleaner.onDestroy(FrameworkModelCleaner.java:31) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ScopeModel.notifyProtocolDestroy(ScopeModel.java:140) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.FrameworkModel.tryDestroyProtocols(FrameworkModel.java:262) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ApplicationModel.onDestroy(ApplicationModel.java:248) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ApplicationModel.tryDestroy(ApplicationModel.java:355) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:132) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) [dubbo-3.0.10.jar:3.0.10]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) [dubbo-3.0.10.jar:3.0.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1058) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) [spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:790) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-2.7.0.jar:2.7.0]
+	at com.ebdmn.EbdmnTestDubboProviderApplication.main(EbdmnTestDubboProviderApplication.java:12) [classes/:na]
+
+2022-08-02 16:17:57.801  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.0] is stopping., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.801  WARN 12271 --- [           main] o.a.d.registry.support.RegistryManager   :  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.802  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.1.0] has stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.802  INFO 12271 --- [           main] o.a.d.c.t.m.DefaultExecutorRepository    :  [DUBBO] destroying application executor repository .., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.803  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.1](dubbo-demo-provider) has stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.805  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Destroying default framework model: Dubbo Framework[1], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.806  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Dubbo Framework[1] is destroying ..., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.806  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.0](DUBBO_INTERNAL_APPLICATION) is stopping., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.806  INFO 12271 --- [           main] o.a.d.registry.support.RegistryManager   :  [DUBBO] Close all registries [], dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.807  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.0.0] is stopping., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.807  INFO 12271 --- [           main] o.a.d.c.deploy.DefaultModuleDeployer     :  [DUBBO] Dubbo Module[1.0.0] has stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.807  INFO 12271 --- [           main] o.a.d.c.t.m.DefaultExecutorRepository    :  [DUBBO] destroying application executor repository .., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.808  INFO 12271 --- [           main] o.a.d.c.d.DefaultApplicationDeployer     :  [DUBBO] Dubbo Application[1.0](DUBBO_INTERNAL_APPLICATION) has stopped., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.808  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Dubbo Framework[1] is destroyed, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.808  INFO 12271 --- [           main] o.apache.dubbo.rpc.model.FrameworkModel  :  [DUBBO] Reset global default framework from Dubbo Framework[1] to null, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.808  INFO 12271 --- [           main] o.a.d.c.r.GlobalResourcesRepository      :  [DUBBO] Destroying global resources ..., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.809  INFO 12271 --- [           main] o.a.d.c.r.GlobalResourcesRepository      :  [DUBBO] Dubbo is completely destroyed, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.809  INFO 12271 --- [           main] o.a.d.c.t.m.FrameworkExecutorRepository  :  [DUBBO] destroying framework executor repository .., dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.809  INFO 12271 --- [           main] o.a.d.c.s.c.DubboSpringInitializer       :  [DUBBO] Unbind Dubbo Module[1.1.1] from spring container: org.springframework.beans.factory.support.DefaultListableBeanFactory@3a1d593e, dubbo version: 3.0.10, current host: 192.168.8.193
+2022-08-02 16:17:57.813  WARN 12271 --- [       Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-08-02 16:17:57.813  WARN 12271 --- [      Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-08-02 16:17:57.813  WARN 12271 --- [      Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-08-02 16:17:57.813  WARN 12271 --- [       Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+与目标 VM 断开连接, 地址为: ''127.0.0.1:49447'，传输: '套接字''
