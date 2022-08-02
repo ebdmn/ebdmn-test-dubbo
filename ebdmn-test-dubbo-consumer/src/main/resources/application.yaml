@@ -1,0 +1,23 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: dubbo-demo-consumer
+############################# dubbo 配置 start #############################
+dubbo:
+  application:
+    name: dubbo-demo-consumer
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: -1
+  #    host: 10.8.0.6 # 多网卡启动时设置的
+  registry:
+    address: nacos://127.0.0.1:8848?namespace=ebdmn-dev # 这样是可以的
+    parameters:
+      namespace: ebdmn-dev #这种不行
+    group: EBDMN_GROUP
+  consumer:
+    group: DEV # 消费者group后缀
+    check: false
+############################# dubbo 配置 end #############################

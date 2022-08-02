@@ -1,0 +1,31 @@
+
+spring:
+  application:
+    name: dubbo-demo-provider
+
+############################# dubbo 配置 start #############################
+dubbo:
+  application:
+    name: dubbo-demo-provider
+  scan:
+    base-packages: com.ebdmn.manager
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20800
+    host: 192.168.8.193 # 多网卡启动时设置的
+  registry:
+    address: nacos://192.168.8.193:8848?namespace=ebdmn-dev # 这样是可以的
+    register-mode: interface # 配置双注册开关 ：all（默认）、interface（接口粒度）、instance（应用粒度）
+    parameters:
+      namespace: ebdmn-dev #这种不行
+    group: EBDMN_GROUP
+  provider:
+    group: DEV # 服务名group后缀
+    timeout: 600000
+  consumer:
+    group: DEV # 消费者group后缀
+    check: false
+############################# dubbo 配置 end #############################
+server:
+  port: 7001
